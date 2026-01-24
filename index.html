@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raoudate Batcha - Portfolio</title>
+    <title>Raoudate - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -13,9 +15,10 @@
     <div class="nav-container">
       <h2 class="logo">RB</h2>
       <ul class="nav-links">
-        <li><a href="#welcome-section">Home</a></li>
-        <li><a href="#project-section">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#welcome-section">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#project-section">Projets</a></li>
+        <li><a href="#skills">Stacks</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -24,18 +27,18 @@
   <section id="welcome-section">
     <div class="welcome-content">
       <div class="profile-photo">
-        <img src="/Users/batcharaoudate/Desktop/images/raraPhoto.jpg" alt="Raoudate Batcha">
+        <img src="images/raraPhoto.jpg" alt="Raoudate Batcha">
       </div>
-      <h1 class="animated-text">Raoudate Batcha</h1>
-      <p class="subtitle">Fullstack Developer | Software Engineering Student at ESEO</p>
+      <h1 class="animated-text">Raoudate BATCHA</h1>
+      <p class="subtitle">Étudiante Ingénieure Logiciels et données  à l'ESEO | Développeuse Fullstack </p>
       <div class="animated-words">
+        <span class="word">Java</span>
         <span class="word">Spring Boot</span>
         <span class="word">Angular</span>
         <span class="word">Vue.js</span>
-        <span class="word">Java</span>
       </div>
-      <p class="alternance-text">Looking for an Alternance starting September 2026</p>
-      <a href="#project-section" class="cta-button">View My Work</a>
+      <p class="alternance-text">Recherche une alternance à partir de septembre 2026</p>
+      <a href="#project-section" class="cta-button">Voir mes projets</a>
     </div>
     <div class="floating-shapes">
       <div class="shape shape1"></div>
@@ -44,9 +47,26 @@
     </div>
   </section>
   
+  <section id="about">
+    <div class="about-container">
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="about-content">
+        
+        <p class="about-text">Depuis que j'ai découvert le développement web, j'ai su que c'était là que je voulais être. Il y a quelque chose de magique à transformer une idée en quelque chose de concret, que les gens peuvent utiliser et apprécier.</p>
+        <p class="about-text">Aujourd'hui en 4ème année à l'ESEO d'Angers, je me passionne pour tout ce qui touche au développement. Chaque ligne de code est une petite victoire, chaque bug résolu une leçon apprise.</p>
+        <p class="about-text">L'été dernier, j'ai passé 17 semaines au Togo à développer un système de tri de colis pour la poste nationale. C'était intense, enrichissant, et ça m'a appris bien plus que ce que j'imaginais. Voir mon travail utilisé concrètement, ça donne vraiment du sens à ce métier.</p>
+        <p class="about-text">Ce que j'aime dans ce métier ? C'est qu'on n'arrête jamais d'apprendre. Il y a toujours une nouvelle technologie à découvrir, un nouveau défi à relever. Et c'est justement ça qui me motive chaque jour.</p>
+        <p class="about-text">Si vous cherchez quelqu'un de motivé, curieux et prêt à s'investir à fond dans vos projets, on devrait sérieusement discuter. Je suis disponible pour une alternance dès septembre 2026.</p>
+        
+        <div class="about-highlight">
+          <p>Rythme : 3 semaines en cours et 2 semaines en entreprise</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="skills"> 
-    <h2 class="section-title">Tech Stack</h2>
+    <h2 class="section-title">Stacks</h2>
     <div class="skills-container">
       
       <div class="skill-category">
@@ -102,7 +122,7 @@
       </div>
 
       <div class="skill-category">
-        <h3>Database</h3>
+        <h3>Bases de données</h3>
         <div class="skills-grid">
           <div class="skill-item">
             <i class="devicon-postgresql-plain colored"></i>
@@ -120,7 +140,7 @@
       </div>
 
       <div class="skill-category">
-        <h3>Tools & DevOps</h3>
+        <h3>Outils & DevOps</h3>
         <div class="skills-grid">
           <div class="skill-item">
             <i class="devicon-git-plain colored"></i>
@@ -150,6 +170,10 @@
             <i class="devicon-postman-plain colored"></i>
             <span>Postman</span>
           </div>
+          <div class="skill-item">
+            <i class="devicon-figma-plain colored"></i>
+            <span>Figma</span>
+          </div>
         </div>
       </div>
 
@@ -157,90 +181,84 @@
 
   </section>
   <section id="project-section">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Projets</h2>
     <div class="projects-grid">
       
-      <!-- Project 1: Postal Sorting System -->
+      <!-- Project 1: Portfolio -->
       <div class="project-tile">
-        <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="Smart Postal Sorting System">
-        </div>
         <div class="project-info">
-          <h3>Smart Postal Sorting System</h3>
-          <p class="project-period">Sep - Dec 2025 | Société des Postes du Togo</p>
-          <p>Developed a responsive web application to automate postal package sorting using OCR and Google Maps geolocation API.</p>
+          <h3>Mon Portfolio</h3>
+          <p class="project-period">Janvier 2026</p>
+          <p>Création d'un portfolio personnel moderne , animations fluides et formulaire de contact fonctionnel. Interface responsive avec sections dynamiques.</p>
+          <div class="tech-stack">
+            <i class="devicon-html5-plain colored" title="HTML5"></i>
+            <i class="devicon-css3-plain colored" title="CSS3"></i>
+            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Postal Sorting System -->
+      <div class="project-tile">
+        <div class="project-info">
+          <h3>Système de Tri Postal Intelligent</h3>
+          <p class="project-period">Sep - Déc 2025 | Stage</p>
+          <p>Développement d'une application web responsive pour automatiser le tri des colis postaux utilisant l'OCR et l'API Geocoding de Google Maps.</p>
           <div class="tech-stack">
             <i class="devicon-spring-plain colored" title="Spring Boot"></i>
             <i class="devicon-angularjs-plain colored" title="Angular"></i>
             <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
           </div>
-          <a href="https://github.com/batchara" target="_blank" class="project-link">View Project</a>
         </div>
       </div>
 
-      <!-- Project 2: Database Management -->
+      <!-- Project 3: Database Management -->
       <div class="project-tile">
-        <div class="project-image">
-          <img src="/Users/batcharaoudate/Desktop/images/raraPhoto.jpg" alt="Database Project">
-        </div>
         <div class="project-info">
-          <h3>Software Engineering Project</h3>
-          <p class="project-period">May - Jun 2024 | ESEO Angers</p>
-          <p>Designed and administered a PostgreSQL database for a project management application using Agile methodology with 2-week Sprints.</p>
+          <h3>Projet de Génie Logiciel</h3>
+          <p class="project-period">Mai - Juin 2024 | ESEO Angers</p>
+          <p>Conception et administration d'une base de données PostgreSQL pour une application de gestion de projets en équipe avec la méthodologie Agile incluant des Sprints de 2 semaines.</p>
           <div class="tech-stack">
             <i class="devicon-spring-plain colored" title="Spring Boot"></i>
             <i class="devicon-vuejs-plain colored" title="Vue.js"></i>
-            <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+            <i class="devicon-mariadb-plain colored" title="MariaDB"></i>
           </div>
-          <a href="https://github.com/batchara" target="_blank" class="project-link">View Project</a>
         </div>
       </div>
 
-      <!-- Project 3: Tetris Game -->
+      <!-- Project 4: Tetris Game -->
       <div class="project-tile">
-        <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800" alt="Tetris Game">
-        </div>
         <div class="project-info">
-          <h3>Tetris Game</h3>
-          <p class="project-period">Academic Project</p>
-          <p>Developed a Tetris game with Java Swing GUI, implementing game logic, event handling, and score management.</p>
+          <h3>Jeu Tetris</h3>
+          <p class="project-period">Projet Académique</p>
+          <p>Développement d'un jeu Tetris avec interface Java Swing, implémentation de la logique du jeu, gestion des événements et gestion des scores.</p>
           <div class="tech-stack">
             <i class="devicon-java-plain colored" title="Java"></i>
           </div>
-          <a href="https://github.com/batchara" target="_blank" class="project-link">View Project</a>
         </div>
       </div>
 
-      <!-- Project 4: Rail Adventure -->
+      <!-- Project 5: Rail Adventure -->
       <div class="project-tile">
-        <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="Rail Adventure Game">
-        </div>
         <div class="project-info">
-          <h3>Ticket to Ride Game</h3>
-          <p class="project-period">Academic Project</p>
-          <p>Built a strategy board game with Java FX, including game board management, player mechanics, and rule implementation.</p>
+          <h3>Jeu Les Aventuriers du Rail</h3>
+          <p class="project-period">Projet Académique</p>
+          <p>Création d'un jeu de société stratégique avec Java FX, incluant la gestion du plateau, les mécaniques de jeu et l'implémentation des règles.</p>
           <div class="tech-stack">
             <i class="devicon-java-plain colored" title="Java"></i>
           </div>
-          <a href="https://github.com/batchara" target="_blank" class="project-link">View Project</a>
         </div>
       </div>
 
-      <!-- Project 5: Master Mind -->
+      <!-- Project 6: Master Mind -->
       <div class="project-tile">
-        <div class="project-image">
-          <img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=800" alt="Master Mind">
-        </div>
         <div class="project-info">
-          <h3>Master Mind Game</h3>
-          <p class="project-period">Academic Project</p>
-          <p>Implemented the classic logic game Master Mind with Python, featuring comparison algorithms and user interface.</p>
+          <h3>Jeu Master Mind</h3>
+          <p class="project-period">Projet Académique</p>
+          <p>Implémentation du jeu de logique classique Master Mind en Python, avec algorithmes de comparaison et interface utilisateur.</p>
           <div class="tech-stack">
             <i class="devicon-python-plain colored" title="Python"></i>
           </div>
-          <a href="https://github.com/batchara" target="_blank" class="project-link">View Project</a>
         </div>
       </div>
 
@@ -249,84 +267,47 @@
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="contact-subtitle">Currently seeking an alternance in fullstack development starting September 2026</p>
+    <h2 class="section-title">Contactez-moi</h2>
+    <p class="contact-subtitle">Actuellement à la recherche d'une alternance en développement fullstack à partir de septembre 2026</p>
     
-    <div class="contact-links">
-      <a href="https://github.com/batchara" id="profile-link" target="_blank" class="contact-link github-link">
-        <i class="devicon-github-original"></i>
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.linkedin.com/in/raoudate-batcha" target="_blank" class="contact-link linkedin-link">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-      <a href="mailto:raoudatebatcha@gmail.com" class="contact-link email-link">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-        </svg>
-        <span>Email</span>
-      </a>
+    <div class="contact-form-container">
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Adresse Email</label>
+          <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Votre message..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">
+          <span class="button-text">Envoyer</span>
+          <span class="button-loader" style="display: none;">Envoi en cours...</span>
+        </button>
+        
+        <div id="form-status" class="form-status"></div>
+      </form>
     </div>
   </section>
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Raoudate Batcha</h3>
-        <p>Fullstack Developer | Software Engineering Student</p>
-        <p class="footer-alternance">Looking for an Alternance starting September 2026</p>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <div class="footer-info">
-          <div class="footer-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-            </svg>
-            <a href="mailto:raoudatebatcha@gmail.com">raoudatebatcha@gmail.com</a>
-          </div>
-          <div class="footer-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
-            </svg>
-            <a href="tel:+33067100446">+33 06 71 00 44 60</a>
-          </div>
-          <div class="footer-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
-            </svg>
-            <span>1 allée du président chirac, Angers, France</span>
-          </div>
-          <div class="footer-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z"/>
-            </svg>
-            <span>Permis B</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-section">
-        <h4>Follow Me</h4>
-        <div class="footer-social">
-          <a href="https://github.com/batchara" target="_blank" class="footer-social-link" title="GitHub">
-            <i class="devicon-github-original"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/raoudate-batcha" target="_blank" class="footer-social-link" title="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+    <div class="footer-social">
+      <a href="https://github.com/batchara" id="profile-link" target="_blank" rel="noopener" class="footer-social-link" title="GitHub">
+        <i class="devicon-github-original"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/raoudate-batcha" target="_blank" rel="noopener" class="footer-social-link" title="LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2025 Raoudate Batcha. All rights reserved.</p>
-    </div>
+    <p class="footer-copyright">&copy; 2026 Raoudate Batcha. Tous droits réservés.</p>
   </footer>
 
   
