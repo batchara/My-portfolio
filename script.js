@@ -1,6 +1,6 @@
 // Initialisation d'EmailJS
 (function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // À remplacer par votre clé publique EmailJS
+    emailjs.init("5cewiCnZM4PbrXjAT");
 })();
 
 // Gestion du formulaire de contact
@@ -23,12 +23,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const formData = {
         from_name: document.getElementById('name').value,
         from_email: document.getElementById('email').value,
-        message: document.getElementById('message').value,
-        to_email: 'raoudate.batcha@gmail.com'
+        message: document.getElementById('message').value
     };
     
     // Envoyer l'email via EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    emailjs.send('service_z1aawrn', 'template_q20p6g8', formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
@@ -48,7 +47,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             console.log('FAILED...', error);
             
             // Afficher le message d'erreur
-            formStatus.textContent = '✗ Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement à raoudate.batcha@gmail.com';
+            formStatus.textContent = '✗ Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement à raoudatebatcha@gmail.com';
             formStatus.className = 'form-status error';
             
             // Réinitialiser le bouton
