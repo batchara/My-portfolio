@@ -891,6 +891,11 @@ footer {
   text-align: center;
 }
 
+/* Classe utilitaire pour cacher les éléments */
+.hidden {
+  display: none !important;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .cta-buttons {
