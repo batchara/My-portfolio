@@ -3,6 +3,44 @@
     emailjs.init("5cewiCnZM4PbrXjAT");
 })();
 
+// Menu Burger
+const burgerMenu = document.getElementById('burger-menu');
+const navMenu = document.getElementById('nav-menu');
+const closeMenu = document.getElementById('close-menu');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+// Ouvrir le menu
+burgerMenu.addEventListener('click', () => {
+  navMenu.classList.add('active');
+  burgerMenu.classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+// Fermer le menu avec le bouton X
+closeMenu.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+  burgerMenu.classList.remove('active');
+  document.body.style.overflow = 'auto';
+});
+
+// Fermer le menu quand on clique sur un lien
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    burgerMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+});
+
+// Fermer le menu si on clique en dehors
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !burgerMenu.contains(e.target) && navMenu.classList.contains('active')) {
+    navMenu.classList.remove('active');
+    burgerMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+});
+
 // Gestion du formulaire de contact
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();

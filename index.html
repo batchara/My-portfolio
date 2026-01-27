@@ -13,14 +13,27 @@
 <body>
     <nav id="navbar">
     <div class="nav-container">
+      <button class="burger-menu" id="burger-menu" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <h2 class="logo">RB</h2>
-      <ul class="nav-links">
-        <li><a href="#welcome-section">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#project-section">Projets</a></li>
-        <li><a href="#skills">Stacks</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      
+      <div class="nav-menu" id="nav-menu">
+        <div class="nav-menu-header">
+          <h2 class="logo">RB</h2>
+          <button class="close-menu" id="close-menu" aria-label="Fermer">×</button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#welcome-section">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Stacks</a></li>
+          <li><a href="#project-section">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -65,8 +78,9 @@
         <p class="about-text"><strong>Le code, c'est ma façon de résoudre des problèmes réels.</strong></p>
         <p class="about-text">Quand j'écris du code, je ne pense pas en lignes de JavaScript ou en composants React. Je pense en solutions. <strong>En impact.</strong></p>
         <p class="about-text"><strong>Été 2024 :</strong> Lomé, Togo. 17 semaines sur un système de tri postal intelligent. Pas un projet d'école, mais une vraie mission terrain. Résultat ? Un système automatisé avec OCR et géolocalisation qui tourne en production. Du code qui sert vraiment.</p>
-        <p class="about-text">Aujourd'hui en 4ème année à l'ESEO, je ne me contente pas de suivre les cours. Je construis. J'expérimente. Je casse. Je répare. Parce que c'est comme ça qu'on apprend vraiment.</p>
-        <p class="about-text"><strong>Ce qui me différencie ?</strong> Je ne cherche pas juste un poste en <strong>alternance.</strong> Je cherche des projets où mon code compte. Des équipes qui ont des vrais défis à relever, pas juste des tickets JIRA à cocher.</p>
+         <p class="about-text"><strong>Ce qui me différencie ?</strong> Je ne cherche pas juste un poste en <strong>alternance.</strong> Je cherche des projets où mon code compte. Des équipes qui ont des vrais défis à relever, pas juste des tickets JIRA à cocher.</p>
+        <p class="about-text"><strong>Aujourd'hui en 4ème année à l'ESEO,</strong>je ne me contente pas de suivre les cours. Je construis. J'expérimente. Je casse. Je répare. Parce que c'est comme ça qu'on apprend vraiment.</p>
+       
         
         <div class="about-highlight">
           <p>Disponible dès septembre 2026.</p>
@@ -300,7 +314,7 @@
         
         <button type="submit" class="submit-button">
           <span class="button-text">Envoyer</span>
-          <span class="button-loader" style="display: none;">Envoi en cours...</span>
+          <span class="button-loader hidden">Envoi en cours...</span>
         </button>
         
         <div id="form-status" class="form-status"></div>
