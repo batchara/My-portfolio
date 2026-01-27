@@ -415,14 +415,14 @@ body {
 
 .about-text {
   font-size: 1.1rem;
-  color: var(--gray-medium);
+  color: var(--text-primary);
   line-height: 1.8;
   margin-bottom: 20px;
   text-align: justify;
 }
 
 .about-text strong {
-  color: var(--accent-blue);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
